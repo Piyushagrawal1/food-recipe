@@ -36,11 +36,13 @@ export default function RecipeDetailsItem({ getRecipeDetails }) {
                         </div>
                         <div className="mt-5">
                             <h3 className="text-lg font-bold text-gray-700">Ingredients</h3>
-                            <ul className="space-y-3 list-disc mt-4 pl-4 text-sm text-gray-700">
-                                {getRecipeDetails?.ingredients.map((item, index) => (
-                                    <li key={index}>{item}</li>
-                                ))}
-                            </ul>
+                            {getRecipeDetails?.ingredients && (
+                                <ul className="space-y-3 list-disc mt-4 pl-4 text-sm text-gray-700">
+                                    {getRecipeDetails.ingredients.map((item, index) => (
+                                        <li key={index}>{item}</li>
+                                    ))}
+                                </ul>
+                            )}
                         </div>
                     </div>
                 </div>
